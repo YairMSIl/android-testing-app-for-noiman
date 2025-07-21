@@ -5,6 +5,7 @@
  */
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
+import DevicePage from '../views/DevicePage.vue';
 
 /**
  * Defines the application's routes.
@@ -18,6 +19,10 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/folder/:id',
     component: () => import('../views/FolderPage.vue')
+  },
+  {
+    path: '/device',
+    component: DevicePage
   }
 ];
 

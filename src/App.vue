@@ -71,6 +71,8 @@ import {
   trashSharp,
   warningOutline,
   warningSharp,
+  hardwareChipOutline,
+  hardwareChipSharp,
 } from 'ionicons/icons';
 
 /**
@@ -119,6 +121,12 @@ const appPages = [
     url: '/folder/Spam',
     iosIcon: warningOutline,
     mdIcon: warningSharp,
+  },
+  {
+    title: 'Device',
+    url: '/device',
+    iosIcon: hardwareChipOutline,
+    mdIcon: hardwareChipSharp,
   },
 ];
 
