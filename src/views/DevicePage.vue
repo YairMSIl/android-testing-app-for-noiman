@@ -1,3 +1,12 @@
+/**
+ * @file-overview This file contains a page component that displays device information.
+ * It uses Ionic Vue components for its layout.
+ *
+ * @example
+ * ```html
+ * <DevicePage />
+ * ```
+ */
 <template>
   <ion-page>
     <ion-header :translucent="true">
@@ -38,15 +47,6 @@
 </template>
 
 <script setup lang="ts">
-/**
- * @file-overview This file contains a page component that displays device information.
- * It uses Ionic Vue components for its layout.
- *
- * @example
- * ```html
- * <DevicePage />
- * ```
- */
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 import { onMounted, ref } from 'vue';
 import { Device, DeviceInfo, BatteryInfo } from '@capacitor/device';

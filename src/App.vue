@@ -1,3 +1,13 @@
+/**
+ * @file-overview This file contains the main application component, which
+ * sets up the overall layout including the side menu and the main content area.
+ * It utilizes Ionic Vue components for navigation and content display.
+ *
+ * @example
+ * ```html
+ * <App />
+ * ```
+ */
 <template>
   <ion-app>
     <ion-split-pane content-id="main-content">
@@ -31,16 +41,6 @@
 </template>
 
 <script setup lang="ts">
-/**
- * @file-overview This file contains the main application component, which
- * sets up the overall layout including the side menu and the main content area.
- * It utilizes Ionic Vue components for navigation and content display.
- *
- * @example
- * ```html
- * <App />
- * ```
- */
 import {
   IonApp,
   IonContent,
@@ -73,6 +73,8 @@ import {
   warningSharp,
   hardwareChipOutline,
   hardwareChipSharp,
+  moveOutline,
+  moveSharp,
 } from 'ionicons/icons';
 
 /**
@@ -127,6 +129,12 @@ const appPages = [
     url: '/device',
     iosIcon: hardwareChipOutline,
     mdIcon: hardwareChipSharp,
+  },
+  {
+    title: 'Motion',
+    url: '/motion',
+    iosIcon: moveOutline,
+    mdIcon: moveSharp,
   },
 ];
 
