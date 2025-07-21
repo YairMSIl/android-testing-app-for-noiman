@@ -10,6 +10,8 @@
     "replicator_ignore": [
         "**/dist/**",
         "**/out/**",
+        "**/build/**",
+        "**android/app/src/main/assets/public/assets/**",
         "**/node_modules/**"
     ]
 }

@@ -31,6 +31,16 @@
 </template>
 
 <script setup lang="ts">
+/**
+ * @file-overview This file contains the main application component, which
+ * sets up the overall layout including the side menu and the main content area.
+ * It utilizes Ionic Vue components for navigation and content display.
+ *
+ * @example
+ * ```html
+ * <App />
+ * ```
+ */
 import {
   IonApp,
   IonContent,
@@ -63,7 +73,16 @@ import {
   warningSharp,
 } from 'ionicons/icons';
 
+/**
+ * Reactive variable to keep track of the currently selected menu item index.
+ * @default 0
+ */
 const selectedIndex = ref(0);
+
+/**
+ * Array of objects defining the main application navigation pages.
+ * Each object contains a title, URL, and platform-specific icons.
+ */
 const appPages = [
   {
     title: 'Inbox',
@@ -102,8 +121,16 @@ const appPages = [
     mdIcon: warningSharp,
   },
 ];
-const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
+/**
+ * Array of strings representing various labels for categorization.
+ */
+const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders', "YairMS"];
+
+/**
+ * Derives the current folder path from the window's URL and updates the `selectedIndex`
+ * to highlight the corresponding menu item.
+ */
 const path = window.location.pathname.split('folder/')[1];
 if (path !== undefined) {
   selectedIndex.value = appPages.findIndex((page) => page.title.toLowerCase() === path.toLowerCase());
@@ -231,3 +258,4 @@ ion-item.selected {
   --color: var(--ion-color-primary);
 }
 </style>
+
