@@ -1,0 +1,7 @@
+{
+  "name": "android-testing-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
