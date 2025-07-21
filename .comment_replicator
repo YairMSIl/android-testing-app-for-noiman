@@ -1,0 +1,15 @@
+{
+    "outputFolder": ".roo/rules/extracted-comments",
+    "fileExtensions": [
+        ".js",
+        ".ts",
+        ".tsx",
+        ".vue"
+    ],
+    "enabled": true,
+    "replicator_ignore": [
+        "**/dist/**",
+        "**/out/**",
+        "**/node_modules/**"
+    ]
+}
