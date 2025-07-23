@@ -26,7 +26,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/motion',
     component: () => import('../views/MotionPage.vue')
-  }
+  },
+  {
+    path: '/android-testing-app-for-noiman',
+    component: () => import('../views/DeepLinkPage.vue'),
+  },
 ];
 
 /**

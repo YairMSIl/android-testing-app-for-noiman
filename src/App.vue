@@ -76,6 +76,20 @@ import {
   moveOutline,
   moveSharp,
 } from 'ionicons/icons';
+import { App } from '@capacitor/app';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+App.addListener('appUrlOpen', (event) => {
+  const url = new URL(event.url);
+  const path = url.searchParams.get('path');
+  if (path) {
+    // Reconstruct the path with query parameters, excluding the 'path' parameter itself
+    url.searchParams.delete('path');
+    const newPath = `${path}?${url.searchParams.toString()}`;
+    router.push(newPath);
+  }
+});
 
 /**
  * Reactive variable to keep track of the currently selected menu item index.
